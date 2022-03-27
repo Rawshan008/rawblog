@@ -12,7 +12,7 @@ export default {
       name: "link",
       title: "Link",
       type: "reference",
-      to: [{ type: "page" }, { type: "post" }],
+      to: [{ type: "page" }],
     },
   ],
   preview: {
