@@ -12,6 +12,11 @@ export default {
       name: "navigationSlug",
       title: "Navigation Slug",
       type: "slug",
+      options: {
+        source: (doc, options) => options.parent.navigationTitle,
+        slugify: input =>
+          input.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
+      },
     },
     {
       name: "navItem",

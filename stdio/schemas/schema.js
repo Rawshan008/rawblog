@@ -6,7 +6,16 @@ import schemaTypes from "all:part:@sanity/base/schema-type"
 
 //Add schama form page folder
 import { page, post, author, category } from "./all-pages"
-import { header, metadata, navigation, navItem } from "./common"
+import {
+  header,
+  metadata,
+  navigation,
+  navItem,
+  footer,
+  footerSocial,
+} from "./common"
+
+// Page builder
 import { pageBuilder, callToAction, ourGallery } from "./page-builder"
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -25,6 +34,8 @@ export default createSchema({
     post,
     author,
     category,
+    footer,
+    footerSocial,
 
     // extra
     metadata,

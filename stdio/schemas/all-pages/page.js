@@ -14,10 +14,10 @@ export default {
   ],
   fields: [
     {
-      name: "metadata",
-      title: "Meta Data",
-      type: "metadata",
-      group: "seo",
+      name: "title",
+      title: "Page Title",
+      type: "string",
+      group: "content",
     },
     {
       name: "slug",
@@ -52,6 +52,12 @@ export default {
       title: "Page Content",
       type: "pageBuilder",
       group: "content",
+    },
+    {
+      name: "metadata",
+      title: "Meta Data",
+      type: "metadata",
+      group: "seo",
     },
   ],
   preview: {
