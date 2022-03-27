@@ -32,6 +32,12 @@ export default {
       group: "content",
     },
     {
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: [{ type: "author" }],
+    },
+    {
       name: "feature_image",
       title: "Feature Image",
       type: "image",
