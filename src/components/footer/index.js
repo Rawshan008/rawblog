@@ -1,4 +1,4 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 
@@ -21,18 +21,21 @@ const Footer = () => {
   `)
 
   const { copywrite, footerSocial } = footer.sanityFooter
-  console.log(footerSocial)
   return (
     <footer className="bg-slate-600 py-3">
       <div className="container flex flex-row items-center justify-between">
         <div className="text-white">{copywrite}</div>
         <div className="text-white">
-          {footerSocial.map(item => {
+          {footerSocial.map((item, index) => {
             const socialImg = getImage(item?.icon?.asset)
             return (
-              <Link to={item?.url}>
-                <GatsbyImage image={socialImg} alt={item?.title} />
-              </Link>
+              <a key={index} className="mx-2" href={item?.url}>
+                <GatsbyImage
+                  className="w-8"
+                  image={socialImg}
+                  alt={item?.title}
+                />
+              </a>
             )
           })}
         </div>

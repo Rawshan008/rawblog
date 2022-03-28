@@ -16,7 +16,14 @@ import {
 } from "./common"
 
 // Page builder
-import { pageBuilder, callToAction, ourGallery } from "./page-builder"
+import {
+  pageBuilder,
+  bannerSection,
+  iconBox,
+  boxItem,
+  callToAction,
+  ourGallery,
+} from "./page-builder"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -42,6 +49,9 @@ export default createSchema({
 
     // pageBuilder
     pageBuilder,
+    bannerSection,
+    iconBox,
+    boxItem,
     callToAction,
     ourGallery,
   ]),

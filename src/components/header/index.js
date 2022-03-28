@@ -41,9 +41,9 @@ const Header = () => {
         </div>
         <ul className="flex flex-row">
           {navigation.map(item => {
-            return item?.navItem.map(navItem => {
+            return item?.navItem.map((navItem, index) => {
               return (
-                <li>
+                <li key={index}>
                   <Link
                     className="block text-white py-2 px-2 transition-all hover:text-teal-500"
                     to={navItem?.link?.slug?.current}
