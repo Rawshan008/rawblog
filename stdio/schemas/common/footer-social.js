@@ -11,8 +11,8 @@ export default {
     },
     {
       name: "icon",
-      title: "Select Icon",
-      type: "iconPicker",
+      title: "Upload Icon",
+      type: "image",
     },
     {
       name: "url",
@@ -27,6 +27,7 @@ export default {
   preview: {
     select: {
       title: "title",
+      media: "image",
     },
   },
 }
