@@ -6,6 +6,7 @@ export default {
     {
       name: "content",
       title: "Content",
+      default: true,
     },
     {
       name: "seo",

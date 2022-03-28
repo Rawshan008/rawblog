@@ -6,6 +6,7 @@ export default {
     {
       name: "footerInfo",
       title: "Footer Info",
+      default: true,
     },
     {
       name: "social",
