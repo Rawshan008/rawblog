@@ -6,6 +6,7 @@ export default {
     {
       name: "logo",
       title: "Logo",
+      default: true,
     },
     {
       name: "navigation",
