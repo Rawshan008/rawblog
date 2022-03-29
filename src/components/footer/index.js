@@ -23,7 +23,7 @@ const Footer = () => {
   const { copywrite, footerSocial } = footer.sanityFooter
   return (
     <footer className="bg-slate-600 py-3">
-      <div className="container flex flex-row items-center justify-between">
+      <div className="container mx-auto flex flex-row items-center justify-between">
         <div className="text-white">{copywrite}</div>
         <div className="text-white">
           {footerSocial.map((item, index) => {

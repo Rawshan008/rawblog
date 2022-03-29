@@ -4,7 +4,11 @@ import Layout from "../components/layout"
 
 // markup
 const IndexPage = ({ data }) => {
-  console.log(data)
+  const headingArray = data?.sanityPage?.pageContent
+
+  const bannerSection = headingArray.find(a => a._type === "bannerSection")
+
+  console.log(bannerSection)
   return <Layout>Hello</Layout>
 }
 
@@ -14,7 +18,13 @@ export const query = graphql`
   query homePage {
     sanityPage(slug: { current: { eq: "home" } }) {
       pageContent {
-        __typename
+        ... on SanityBannerSection {
+          _type
+          bannerHeading
+          bannerDescription
+          bannerButtonText
+          bannerButtonLink
+        }
         ... on SanityIconBox {
           _type
           iconBoxTitle
@@ -22,23 +32,6 @@ export const query = graphql`
           boxItems {
             title
             description
-            icon {
-              asset {
-                gatsbyImageData(placeholder: BLURRED)
-              }
-            }
-          }
-        }
-        ... on SanityBannerSection {
-          _type
-          bannerHeading
-          bannerDescription
-          bannerButtonText
-          bannerButtonLink
-          bannerImage {
-            asset {
-              gatsbyImageData(placeholder: BLURRED)
-            }
           }
         }
       }
